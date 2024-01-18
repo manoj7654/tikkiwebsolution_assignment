@@ -8,12 +8,14 @@ require("dotenv").config()
 
 const morgan = require('morgan');
 const { userRouter } = require("./routes/userRouter");
+const { blogRouter } = require("./routes/blogRouter");
 app.use(morgan('dev'));
 app.use(express.json());
 
 
 
 app.use("/users",userRouter)
+app.use("/blogs",blogRouter)
 
 
 
